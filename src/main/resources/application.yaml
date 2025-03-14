@@ -1,6 +1,15 @@
 spring:
-  application:
-    name: challenge-java-developer
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 
 server:
-  port: 5000
+  port: 8081
